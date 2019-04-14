@@ -1,0 +1,88 @@
+/* components/a_now/cmp.wxss */
+.now {
+  height: 800rpx;
+  color: #ffffff;
+  position: relative;
+}
+
+.now .bg {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.now .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.now .nav {
+  position: absolute;
+  left: 32rpx;
+  top: 32rpx;
+  z-index: 1;
+  background-color: #eef0fa;
+  border-radius: 60rpx;
+  padding: 0 24rpx 0 20rpx;
+  height: 64rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  color: #bbc2c9;
+}
+
+.now .nav .map {
+  width: 38rpx;
+  height: 38rpx;
+  position: relative;
+  top: 3rpx;
+}
+
+.now .wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.now .wrapper text,
+.now .wrapper view {
+  text-align: center;
+}
+
+.now .wrapper .left {
+  flex-shrink: 0;
+  font-size: 256rpx;
+}
+
+.now .wrapper .right {
+  display: flex;
+  flex-direction: column;
+  font-size: 36rpx;
+}
+
+.now .wrapper .right .txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.now .wrapper .right .txt .img {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.now .wrapper .right .updateTime {
+  font-size: 24rpx;
+}

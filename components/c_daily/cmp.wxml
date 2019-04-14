@@ -1,0 +1,15 @@
+<view class="daily">
+  <view class="day" wx:for="{{ daily_forecast }}" wx:key="date">
+    <text class="first"
+      ><text class="zhou">{{ dayArr[index] }} </text>{{ filterTime(item.date) }}</text
+    >
+    <view class="mid">
+      <image class="img" src="{{ filterImg(item.cond_code_d, null, true) }}" mode="widthFix"></image>
+      <text class="condTxt">{{ item.cond_txt_d }}</text>
+    </view>
+    <text class="degree">{{ item.tmp_min }}° ~ {{ item.tmp_max }}°</text>
+  </view>
+</view>
+
+<wxs src="../../wxs/filterTime.wxs" module="filterTime"></wxs>
+<wxs src="../../wxs/filterImg.wxs" module="filterImg"></wxs>

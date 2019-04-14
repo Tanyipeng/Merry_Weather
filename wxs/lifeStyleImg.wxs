@@ -1,0 +1,6 @@
+var lifeStyleImg = function(type) {
+  var str = '/images/life_style_icon/' + type + '.png';
+  return str;
+};
+
+module.exports = lifeStyleImg;

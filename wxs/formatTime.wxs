@@ -1,0 +1,5 @@
+var format = function(t = '2018-01-21 00:00') {
+  return t.split(' ')[1];
+}
+
+module.exports = format;

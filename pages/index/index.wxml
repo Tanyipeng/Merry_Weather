@@ -1,0 +1,29 @@
+<view class="container" wx:if="{{ showAll }}">
+  <!-- 现在天气 -->
+  <c-now
+    basic="{{ basic }}"
+    now="{{ now }}"
+    update="{{ format(loc) }}"
+    aqi="{{ aqi }}"
+    qlty="{{ qlty }}"
+    bgImg="{{ bgImg }}"
+  ></c-now>
+
+  <view class="wrapper">
+    <!-- 逐小时天气 -->
+    <c-hourly class="common" hourly="{{ hourly }}"></c-hourly>
+
+    <!-- 近七天天气 -->
+    <c-daily class="common" daily_forecast="{{ daily_forecast }}"></c-daily>
+
+    <!-- 推荐生活方式 -->
+    <c-life-style class="common" lifestyle="{{ lifestyle }}"></c-life-style>
+
+    <view class="dev">Developed by typ, API by heweather~</view>
+  </view>
+
+  <image class="share" src="/images/share.png" bindtap="showShare"></image>
+  <c-share isShare="{{ isShare }}" bindmasktap="hideShare"></c-share>
+</view>
+
+<wxs src="../../wxs/formatTime.wxs" module="format"></wxs>

@@ -1,0 +1,16 @@
+<scroll-view scroll-x>
+  <view class="hourly">
+    <view class="item" wx:for="{{ hourly }}" wx:key="time">
+      <text>{{ item.tmp }}°</text>
+      <image
+        class="img"
+        src="{{ filterImg(item.cond_code, item.time) }}"
+        mode="widthFix"
+      ></image>
+      <text>{{ item.cond_txt }}</text> <text>{{ format(item.time) }}</text>
+    </view>
+  </view>
+</scroll-view>
+
+<wxs src="../../wxs/filterImg.wxs" module="filterImg"></wxs>
+<wxs src="../../wxs/formatTime.wxs" module="format"></wxs>

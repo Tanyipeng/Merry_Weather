@@ -1,0 +1,29 @@
+/* components/d_life_style/cmp.wxss */
+.lifestyle .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lifestyle > view:not(:last-of-type) {
+  margin-bottom: 50rpx;
+}
+
+.lifestyle .item .img {
+  width: 80rpx;
+}
+
+.lifestyle .item .txt {
+  display: flex;
+  flex-direction: column;
+  width: 580rpx;
+}
+
+.lifestyle .item .txt text:first-of-type {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.lifestyle .item .txt text:last-of-type {
+  font-size: 28rpx;
+}

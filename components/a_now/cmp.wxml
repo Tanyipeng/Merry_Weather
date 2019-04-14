@@ -1,0 +1,27 @@
+<view class="now">
+  <image class="bg" src="{{ bgImg }}"></image>
+  <view class="mask"></view>
+
+  <view class="nav">
+    <image class="map" src="/images/map.png"></image>
+    <text bindtap="toSearch">{{
+      formatCity(basic.admin_area, basic.parent_city, basic.location)
+    }}</text>
+  </view>
+  <view class="wrapper">
+    <text class="left">{{ now.tmp }}°</text>
+    <view class="right">
+      <view class="txt"
+        ><image class="img" src="{{ filterImg(now.cond_code) }}"></image>
+        <text> {{ now.cond_txt }}<text wx:if="{{ qlty && aqi }}"> | {{ qlty }} {{ aqi }}</text></text>
+      </view>
+      <text class="wind"
+        >湿度 {{ now.hum }}% | {{ now.wind_dir }} {{ now.wind_sc }}级</text
+      >
+      <text class="updateTime">更新时间: {{ update }}</text>
+    </view>
+  </view>
+</view>
+
+<wxs src="../../wxs/formatCity.wxs" module="formatCity"></wxs>
+<wxs src="../../wxs/filterImg.wxs" module="filterImg"></wxs>

@@ -1,0 +1,20 @@
+<!--components/e_share/cmp.wxml-->
+<view class="shareWrapper" wx:if="{{ isShare }}">
+  <view class="mask" bindtap="hideShare"></view> <view class="line"></view>
+
+  <view class="group">
+    <button class="btn" plain="true" open-type="share">
+      <image
+        class="weixin"
+        src="/images/share/weixin.png"
+      ></image>
+    </button>
+  </view>
+  <view class="friends">
+    <image
+      class="pengyouquan"
+      src="/images/share/pengyouquan.png"
+      bindtap="toSaveImg"
+    ></image>
+  </view>
+</view>

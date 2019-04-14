@@ -1,0 +1,15 @@
+<view class="lifestyle">
+  <view class="item" wx:for="{{ lifestyle }}" wx:key="type">
+    <image
+      class="img"
+      src="{{ lifeStyleImg(item.type) }}"
+      mode="widthFix"
+    ></image>
+    <view class="txt">
+      <text>{{ map[item.type] }}: {{ item.brf }}</text>
+      <text class="content">{{ item.txt }}</text>
+    </view>
+  </view>
+</view>
+
+<wxs src="../../wxs/lifeStyleImg.wxs" module="lifeStyleImg"></wxs>

@@ -1,0 +1,19 @@
+var judge = function(cond_code = '100') {
+  var arr = ['100', '103', '104', '300', '301', '406', '407'];
+  var index = arr.indexOf(cond_code);
+  return index !== -1 ? arr[index] + 'n' : cond_code;
+};
+
+var filterImg = function(cond_code = '100', time = '', day = false) {
+  if (!day) {
+    time = time ? time.split(' ')[1] : getDate().getHours() + ':00';
+    var hour = time.split(':')[0];
+    if (!(hour > 6 && hour < 19)) {
+      cond_code = judge(cond_code);
+    }
+  }
+  var address = '/images/icon-heweather/' + cond_code + '.png';
+  return address;
+};
+
+module.exports = filterImg;

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "c-now": "/components/a_now/cmp",
+    "c-hourly": "/components/b_hourly/cmp",
+    "c-daily": "/components/c_daily/cmp",
+    "c-life-style": "/components/d_life_style/cmp",
+    "c-share": "/components/e_share/cmp"
+  },
+  "enablePullDownRefresh": true
+}

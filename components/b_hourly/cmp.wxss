@@ -1,0 +1,39 @@
+/* components/b_hourly/cmp.wxss */
+.hourly {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 24rpx;
+}
+
+.hourly .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.hourly .item:first-of-type {
+  padding-left: 20rpx;
+}
+
+.hourly .item:last-of-type {
+  padding-right: 20rpx;
+}
+
+.hourly .item:not(:last-of-type) {
+  margin-right: 80rpx;
+}
+
+.hourly .item .img {
+  width: 46rpx;
+}
+
+.hourly .item text:nth-of-type(2) {
+  color: #d0d0d0;
+}
+
+.hourly .item text:not(:nth-of-type(2)) {
+  color: #a1b6ca;
+}

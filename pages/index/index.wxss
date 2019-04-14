@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 0 30rpx;
+}
+
+.common {
+  display: block;
+  padding: 50rpx 0;
+  border-bottom: 2rpx solid #f6f6f6;
+}
+
+.dev {
+  padding: 20rpx 0;
+  text-align: center;
+  color: #d0d0d0;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.share {
+  position: fixed;
+  right: 32rpx;
+  bottom: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+}

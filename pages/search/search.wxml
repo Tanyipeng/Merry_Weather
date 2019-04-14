@@ -1,0 +1,62 @@
+<view class="m">
+  <view class="inputControl">
+    <input
+      class="inp"
+      type="text"
+      placeholder="快来搜索吧~如：朝阳北京"
+      value="{{ value }}"
+      bindinput="input"
+      bindfocus="focus"
+    />
+    <text class="clearInp" wx:if="{{ isInput }}" bindtap="clearIpt"></text>
+    <text class="cancel" wx-if="{{ isFocus }}" bindtap="setInpToBlur"
+      >取消</text
+    >
+  </view>
+  <map
+    class="map"
+    longitude="{{ longitude }}"
+    latitude="{{ latitude }}"
+    markers="{{ markers }}"
+  >
+    <cover-view class="cityList" wx:if="{{ isFocus }}">
+      <cover-view class="hotCity" wx:if="{{ !hasSearch }}">
+        <cover-view class="title">热门城市</cover-view>
+        <cover-view class="contentWrapper">
+          <cover-view
+            class="content"
+            wx:for="{{ hotCityArr }}"
+            wx:key="cid"
+            data-admin_area="{{ item.admin_area }}"
+            data-parent_city="{{ item.parent_city }}"
+            data-location="{{ item.location }}"
+            data-lon="{{ item.lon }}"
+            data-lat="{{ item.lat }}"
+            bindtap="searchMap"
+          >
+            {{ item.location }}
+          </cover-view>
+        </cover-view>
+      </cover-view>
+
+      <cover-view class="searchList" wx:if="{{ hasSearch }}">
+        <cover-view
+          class="list"
+          wx:for="{{ searchList }}"
+          wx:key="cid"
+          data-admin_area="{{ item.admin_area }}"
+          data-parent_city="{{ item.parent_city }}"
+          data-location="{{ item.location }}"
+          data-lon="{{ item.lon }}"
+          data-lat="{{ item.lat }}"
+          bindtap="searchMap"
+        >
+          {{ formatCity(item.admin_area, item.parent_city, item.location) }}
+          <cover-view class="line"></cover-view>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  </map>
+</view>
+
+<wxs src="../../wxs/formatCity.wxs" module="formatCity"></wxs>

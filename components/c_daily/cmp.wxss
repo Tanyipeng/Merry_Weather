@@ -1,0 +1,43 @@
+/* components/c_daily/cmp.wxss */
+.daily {
+  font-size: 28rpx;
+}
+
+.daily .day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.daily > view:not(:last-of-type) {
+  padding-bottom: 50rpx;
+}
+
+.daily .day .zhou {
+  font-size: 36rpx;
+}
+
+.daily .day .degree,
+.daily .day .zhou {
+  font-weight: bold;
+}
+
+.daily .day .mid {
+  display: flex;
+  align-items: center;
+}
+
+.daily .day .mid .img {
+  width: 46rpx;
+  margin-right: 20rpx;
+}
+
+.daily .day .mid .condTxt {
+  width: 56rpx;
+}
+
+.daily .day .degree {
+  width: 150rpx;
+  text-align: right;
+}

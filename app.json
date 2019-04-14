@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#cfdcef",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Merry Weather"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置将用于获取当地天气数据"
+    }
+  }
+}
