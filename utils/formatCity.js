@@ -1,19 +1,9 @@
 var formatCity = function(
-  area = '湖北',
-  parent_city = '武汉',
-  location = '江岸'
+  area,
+  parent_city,
+  location
 ) {
-  var str = '';
-  if (area !== parent_city && parent_city !== location && area !== location) {
-    str = area + '省' + parent_city + '市' + location + '区';
-  } else if (area === parent_city && area === location) {
-    str = area + '市';
-  } else if (area === parent_city && parent_city !== location) {
-    str = parent_city + '市' + location + '区';
-  } else {
-    str = area + '省' + parent_city + '市';
-  }
-  return str;
+  return [area, parent_city, location].filter(item => !!item).join('-');
 };
 
 export default formatCity;

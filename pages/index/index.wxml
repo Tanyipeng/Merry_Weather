@@ -19,7 +19,7 @@
     <!-- 推荐生活方式 -->
     <c-life-style class="common" lifestyle="{{ lifestyle }}"></c-life-style>
 
-    <view class="dev">Developed by typ, API by heweather~</view>
+    <view class="dev">Developed by tanyp, API by heweather~</view>
   </view>
 
   <image class="share" src="/images/share.png" bindtap="showShare"></image>

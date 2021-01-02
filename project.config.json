@@ -1,58 +1,83 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"autoAudits": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.5.0",
-	"appid": "wx09ef1fcf4fe7d488",
-	"projectname": "Merry_Weather",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 1,
-			"list": [
-				{
-					"id": 0,
-					"name": "搜索",
-					"pathName": "pages/search/search",
-					"query": "basic={\"cid\":\"CN101200107\",\"location\":\"江岸\",\"parent_city\":\"武汉\",\"admin_area\":\"湖北\",\"cnty\":\"中国\",\"lat\":\"30.59491158\",\"lon\":\"114.30303955\",\"tz\":\"+8.00\"}"
-				},
-				{
-					"id": 1,
-					"name": "保存图片页面",
-					"pathName": "pages/saveImg/saveImg",
-					"query": "",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.5.0",
+  "appid": "wx09ef1fcf4fe7d488",
+  "projectname": "Merry_Weather",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "搜索",
+          "pathName": "pages/search/search",
+          "query": "basic={\"cid\":\"CN101200107\",\"location\":\"江岸\",\"parent_city\":\"武汉\",\"admin_area\":\"湖北\",\"cnty\":\"中国\",\"lat\":\"30.59491158\",\"lon\":\"114.30303955\",\"tz\":\"+8.00\"}"
+        },
+        {
+          "id": 1,
+          "name": "保存图片页面",
+          "pathName": "pages/saveImg/saveImg",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
 }
